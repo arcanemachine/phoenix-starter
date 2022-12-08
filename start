@@ -2,9 +2,7 @@
 
 cd $(dirname "$0")
 
-echo "This will start a postgres docker container. Don't forget to stop it when you're done!
-
-I'll try to stop it when you exit with Ctrl + C, but I just wanted to let you know in case it doesn't stop properly.
+echo "This will start a postgres docker container. I'll try to stop it when you exit with Ctrl + C.
 
 Press enter key to continue..."
 
