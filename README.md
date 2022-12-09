@@ -4,11 +4,8 @@ A starter to get my Phoenix projects up and running. Mainly used for easy-bake `
 
 ## Instructions
 
-1. If `direnv` is not installed on your system, install it now: `https://direnv.net/`
-2. Create your project: `mix phx.new your_project_name`
-3. Add project info to the `.env` file.
-4. Run `direnv allow` so that your environment reflects the contents of the `.env` file.
-5. Use the `start` script to start the Postgres container and the Phoenix server.
-  - During the first run, pass `--init` as the first argument to set up the database.
-    - e.g. `start --init`
-6. To add the project to a Git repo, delete the `.git` folder in the root directory of the project, and create a new git repo with `git init`.
+1. Create your project: `mix phx.new your_project_name`
+2. Update the value of `POSTGRES_DB` in `.env` so that it contains the name of your project.
+3. Start the `postgres` container: `podman-compose up`
+4. Run `mix ecto.create`
+5. Run `mix phx.server`
